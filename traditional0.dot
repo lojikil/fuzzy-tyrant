@@ -1,0 +1,7 @@
+digraph G {
+    a[label="traditional pentests",shape=diamond]
+    b[label="dynamic testing",shape=box]
+    c[label="static testing", shape=box]
+    a->b[label="scanners, brute force, &c"]
+    a->c[label="SAST, linters, 'vuln scan', &c."]
+}
