@@ -1,22 +1,24 @@
 # symbolically executing a fuzzy tyrant
 ## or, how to fuck literally anything
-### a tragedy in 3 acts
+### a tragedy in four symbolic acts of Verdi's Nabucco
+
+
 
 ---
 
 # overture
 
 #### our tragedies:
-1. the traditional kingdoms
-   1. what are they
-   2. how do they work
-   3. coverage?
-2. a fuzzy tyrant
+1. prologos (Jerusalem)
+1. the traditional kingdoms (The Impious Ones)
+   1. what are they & how do they work
+   1. coverage?
+1. a fuzzy tyrant (The Prophecy)
    1. of fuzzing and traditional testing
-   2. understanding property coverage 
-3. his symbolic execution
+   1. understanding property coverage 
+1. his symbolic execution (The Broken Idol)
    1. program analysis
-   2. concolic and symbolic  
+   1. concolic and symbolic  
 
 <!--
 footer: Stefan Edwards::@lojikil
@@ -31,17 +33,36 @@ page_number: true
 [lojikil.com]
 Stefan Edwards (lojikil) is not presently logged in.
 
-Senior Security Consultant
-Twitter/Github/Lobste.rs: lojikil
-Works in: FinTech, Blockchain, IoT, compilers, vCISO
-Previous: net, web, adversary sim, &c. 
-Infosec philosopher, amateur^wprofessional programming 
+- Principal Security Consultant at Trail of Bits
+- Twitter/Github/Lobste.rs: lojikil
+- Works in: Defense, FinTech, Blockchain, IoT, compilers,
+vCISO services
+- Previous: net, web, adversary sim, &c. 
+- Infosec philosopher, amateur^wprofessional programming 
 language theorist, everyday agronomer, father (doge, 
 human), future-husband.
 
 WARNING: DEAF
 WARNING: Noo Yawk
 ```
+
+---
+
+# prologos: Jerusalem
+this talk covers three main items:
+
+1. how can we "do better" than traditional tooling?
+2. can we make "formal" tools more accessible?
+3. 
+
+---
+
+# prologos: Jerusalem (_or, what the actual fuck, loji?_)
+## three main take aways:
+
+1. traditional tools have a traditional place
+2. formal verification techniques are accessible for everyone 
+3. how to do program analysis of JavaScript malware
 
 ---
 
