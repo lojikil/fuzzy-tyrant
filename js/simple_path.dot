@@ -1,0 +1,9 @@
+digraph sp {
+    jk[label="j = lambda0, k = lambda1"]
+    if[label="if: j < k", shape=Mdiamond]
+    then[label="call: console.log, arg: 'j is less than k'", shape=box]
+    else[label="call: console.log, arg: 'j is greater than or equal to k'", shape=box]
+    jk->if
+    if->then[label="j < k"]
+    if->else[label="j >= k"]
+}
