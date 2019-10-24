@@ -17,6 +17,8 @@ vCISO services, threat modeling
 - Previous: net, web, adversary sim, &c. 
 - Infosec philosopher, programming 
 language theorist, everyday agronomer, father.
+- As heard on Absolute AppSec (multiple) and Risky
+Business (No. 559).
 
 WARNING: DEAF
 WARNING: Noo Yawk
@@ -467,7 +469,14 @@ this tells us two things:
 
 ---
 
-# a3s1: program analysis 
+# a3s2: concolic & symbolic
+
+- concolic execution: execution with specific (concrete) values
+- symbolic execution: 
+
+---
+
+# a3s2: concolic & symbolic
 
 - we want to map program space
   - tags (UUIDs) show unique locations
@@ -477,9 +486,72 @@ this tells us two things:
 
 ---
 
-# a3s1: program analysis
+# a3s2: concolic & symbolic
 
 - but more importantly... *unknown* (symbolic) data
 
 ![symbex 1](symbex1.png)
+
+---
+
+# a3s2: concolic & symbolic
+
+- but who cares? consider:
+
+```scheme
+(if (variable foo ::pure-symbolic) 
+    (value 12 ::int trace: 12 tag: 91ac...) 
+    (value 13 ::int trace: 13 tag: e8ab...))
+```
+
+- we know nothing about `foo`
+- we do know sometimes we get 12, sometimes 13
+
+---
+
+# a3s2: concolic & symbolic
+
+- ask questions
+
+![the various results of attempting to execute the previous code](symbex2.png)
+
+- `PathExecution` gives a value/code under a specific true constraint
+- `ForkPathExectution` gives us **both** sides of an execution path
+
+---
+
+# a3s2: concolic & symbolic 
+
+- find the constraints underwhich code executes
+- **coming soon**: generate reasonable strategies for the same
+- execute code both concretely & symbolically
+- with both micro-execution & standard execution models 
+
+---
+
+# quick break: micro-execution
+
+- given an {env, stack, ...}, execute **one** instruction/form
+- helpful for understanding impact of an instruction/form
+- https://github.com/lifting-bits/microx
+- https://patricegodefroid.github.io/public_psfiles/icse2014.pdf
+
+---
+
+# a3s2: concolic & symbolic
+
+- **lots** to do
+    1. flesh out the JS parser
+    2. fix ANF & lambda lifting
+    3. more tests 
+    4. more strategies (for generation, &c)
+- my use: understanding constraints in gnarly code 
+- my  future use: exercising them
+
+---
+
+# fin
+
+- thanks for coming
+- questions?
 
