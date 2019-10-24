@@ -35,7 +35,7 @@ WARNING: Noo Yawk
    1. of fuzzing and traditional testing
    1. understanding property coverage 
 1. his symbolic execution (The Broken Idol)
-   1. program analysis
+   1. program space & analysis
    1. concolic and symbolic  
 
 <!--
@@ -71,9 +71,28 @@ and really, if you take anything away from this talk, it's how to do program & l
 
 # prologos: Jerusalem
 
+- program analysis?
+  - programs have a "space"
+  - intended actions vs unintended 
+  - many techniques to discover
+- effectively: formalized & detailed debugging
+ 
+---
+
+# prologos: Jerusalem
+
 ![programs have all sorts of unintended behavior](weird_machine.png)
 
 _[source: Weird Machines](https://en.wikipedia.org/wiki/Weird_machine)_
+
+---
+
+#  prologos: Jerusalem
+
+- many, many types of "weird machines"
+  - using `MOV` as a OISC on x86
+  - Python's `pickle`
+  - ROP gadgets   
 
 ---
 
@@ -314,13 +333,18 @@ as humans it's really hard for us to think about all the various ways in which d
 
 - the goal: greater depth of coverage
 - beyond what humans can see
-- ${FUZZ JS program here}
+- results speak for themselves:
+  - personally, 50+ significant bugs from Radamsa in 2 years
+  - [afl has a repo, with at least 332 CVEs listed](https://github.com/mrash/afl-cve)
+- clearly random testing finds serious issues
+- ... but...  
 
 ---
 
 # a2s2: a fuzzy notion of coverage
 
-- we generate data and watch program result
+- what do we get coverage wise?
+-  we generate data and watch program result
 - want: program to walk other paths
 - get: _deeply shrugging man emoji_
 
@@ -362,7 +386,7 @@ all of the work of fuzzing belies a fundamental point: we're attempting to disco
 - programs themselves are just graphs
   - constrained by conditions
   - constrained by input
-- Can we discover & graph all paths?  
+- can we discover & graph all paths?  
 ---
 
 # act 3: his symbolic execution
@@ -435,11 +459,27 @@ this tells us two things:
 - decided to fix that: github.com/lojikil/uspno.9
   - "Unnamed Symbex Project No. 9" 
 - focus on HLLs
+  - primarily JS & VBScript 
 - works on partial code 
 - safe by default
 - **very** new: began life 26 SEP 2019
-- Basically: an ugly Scheme-dialect
+- Basically: an ugly Scheme-dialect + Python Library
 
 ---
 
 # a3s1: program analysis 
+
+- we want to map program space
+  - tags (UUIDs) show unique locations
+  - traces show values + tags that created data 
+
+![symbex first one](symbex0.png)
+
+---
+
+# a3s1: program analysis
+
+- but more importantly... *unknown* (symbolic) data
+
+![symbex 1](symbex1.png)
+
