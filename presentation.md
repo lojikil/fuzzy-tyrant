@@ -28,7 +28,7 @@ WARNING: Noo Yawk
 
 # overture
 
-#### our tragedies:
+#### our traged     ies:
 1. prologos (Jerusalem)
 1. the traditional kingdoms (The Impious Ones)
    1. what are they & how do they work
@@ -555,3 +555,4 @@ this tells us two things:
 - thanks for coming
 - questions?
 
+![Nabucco in his purest form](nabucco-small.png)
