@@ -1,5 +1,5 @@
 # symbolically executing a fuzzy tyrant
-## or, how to fuck literally anything
+## or, how to h\*ck literally anything
 ### a tragedy in four symbolic acts of Verdi's Nabucco
 
 ---
@@ -56,7 +56,7 @@ this talk covers three main items:
 
 ---
 
-# prologos: Jerusalem (_or, what the actual fuck, loji?_)
+# prologos: Jerusalem (_or, what the actual h\*ck, loji?_)
 ## three main take aways:
 
 1. traditional tools have a traditional place
